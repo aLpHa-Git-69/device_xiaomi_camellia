@@ -11,3 +11,38 @@ persist.dbg.wfc_avail_ovr=1
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Optimize Android Framework compilation for 6GB RAM
+dalvik.vm.systemservercompilerfilter=speed-profile
+
+
+
+# Disable HWUI frame profiling (effective in userdebug builds)
+debug.hwui.profile=false
+
+# ============================================================
+# Dalvik/ART Heap — tuned for 6GB RAM
+# ============================================================
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=1024m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=1m
+dalvik.vm.heapmaxfree=8m
+
+# ============================================================
+# ART Dexopt filters
+# ============================================================
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.shared=speed
+
+# ============================================================
+# dex2oat stability — prevents watchdog kill on large apps
+# ============================================================
+dalvik.vm.dex2oat-flags=--no-watch-dog
+
+# ============================================================
+# Predictive Back Gesture
+# ============================================================
+persist.wm.debug.predictive_back=1
