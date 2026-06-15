@@ -194,16 +194,6 @@ PRODUCT_COPY_FILES += $(foreach device,camellian camellianp, \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-
-ro.config.low_ram=false
-ro.lmk.use_psi=true
-ro.lmk.use_minfree_levels=false
-ro.lmk.use_new_strategy=true
-ro.lmk.thrashing_limit=70
-ro.lmk.thrashing_limit_decay=10
-ro.lmk.downgrade_pressure=30
-ro.lmk.kill_heaviest_task=true
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
