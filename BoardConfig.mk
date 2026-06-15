@@ -21,6 +21,8 @@ AB_OTA_PARTITIONS := \
     vbmeta_vendor \
     vendor
 
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
