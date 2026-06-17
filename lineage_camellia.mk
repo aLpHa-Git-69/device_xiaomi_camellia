@@ -22,6 +22,11 @@ PRODUCT_MODEL := M2103K19C
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+AXION_CAMERA_REAR_INFO := 48+2+2
+AXION_CAMERA_FRONT_INFO := 12
+AXION_MAINTAINER := aLpHa
+AXION_PROCESSOR := Mediatek_Dimensity_700
+
 # Dolby Audio
 # Set to false to disable Dolby Audio support at build time
 INCLUDE_DOLBY_AUDIO := true
