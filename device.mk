@@ -90,6 +90,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+#dolby
+$(INCLUDE_DOLBY_AUDIO),true)
+$(call inherit-product, hardware/dolby/dolby.mk)
+
+# LunarisDolby app
+PRODUCT_PACKAGES += \
+    LunarisDolby
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
